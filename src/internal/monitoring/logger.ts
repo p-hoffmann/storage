@@ -14,8 +14,12 @@ const {
   region,
 } = getConfig()
 
+// Pino transports use worker_threads which aren't available in Deno edge runtime.
+// When running under Deno, skip transports and log directly to stdout.
+const isDeno = typeof (globalThis as any).Deno !== 'undefined'
+
 export const baseLogger = pino({
-  transport: buildTransport(),
+  ...(isDeno ? {} : { transport: buildTransport() }),
   serializers: {
     error(error) {
       return normalizeRawError(error)

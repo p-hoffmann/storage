@@ -1,6 +1,6 @@
-export { BaseCollector, CollectorConfig, MetricCollector } from './base-collector'
+export { BaseCollector, type CollectorConfig, type MetricCollector } from './base-collector'
 export { CpuCollector } from './cpu-collector'
 export { HandlesCollector } from './handles-collector'
-export { StorageNodeInstrumentation, StorageNodeInstrumentationConfig } from './instrumentation'
+export { StorageNodeInstrumentation, type StorageNodeInstrumentationConfig } from './instrumentation'
 export { ExternalMemoryCollector } from './memory-collector'
 export { ProcessStartCollector } from './process-start-collector'

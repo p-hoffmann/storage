@@ -10,7 +10,8 @@ import {
 } from '@internal/monitoring/metrics'
 import TTLCache from '@isaacs/ttlcache'
 import { JWTPayload } from 'jose'
-import { Knex, knex } from 'knex'
+import knexDefault, { Knex } from 'knex'
+const knex = knexDefault.knex ?? knexDefault
 import { getConfig } from '../../config'
 
 const {

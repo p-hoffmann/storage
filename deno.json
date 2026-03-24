@@ -1,0 +1,36 @@
+{
+  "nodeModulesDir": "manual",
+  "unstable": ["sloppy-imports"],
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "verbatimModuleSyntax": false
+  },
+  "imports": {
+    "@internal/": "./dist/internal/",
+    "@storage/": "./dist/storage/",
+    "async_hooks": "node:async_hooks",
+    "buffer": "node:buffer",
+    "child_process": "node:child_process",
+    "crypto": "node:crypto",
+    "fs": "node:fs",
+    "http": "node:http",
+    "os": "node:os",
+    "path": "node:path",
+    "stream": "node:stream",
+    "string_decoder": "node:string_decoder",
+    "tls": "node:tls",
+    "util": "node:util",
+    "fs/promises": "node:fs/promises",
+    "stream/promises": "node:stream/promises",
+    "ajv/dist/jtd": "./node_modules/ajv/dist/jtd.js",
+    "pino-logflare/dist/httpStream": "./node_modules/pino-logflare/dist/httpStream.js",
+    "postgres-migrations/dist/run-migration": "./node_modules/postgres-migrations/dist/run-migration.js",
+    "postgres-migrations/dist/types": "./node_modules/postgres-migrations/dist/types.js",
+    "postgres-migrations/dist/validation": "./node_modules/postgres-migrations/dist/validation.js",
+    "fs-xattr": "./stubs/fs-xattr.js",
+    "@opentelemetry/host-metrics": "./stubs/host-metrics.js",
+    "@opentelemetry/instrumentation-runtime-node": "./stubs/instrumentation-runtime-node.js",
+    "@smithy/shared-ini-file-loader": "./stubs/shared-ini-file-loader.js"
+  }
+}

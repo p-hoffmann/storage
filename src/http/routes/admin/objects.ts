@@ -1,6 +1,5 @@
 import { ObjectScanner } from '@storage/scanner/scanner'
-import { FastifyInstance, RequestGenericInterface } from 'fastify'
-import { FastifyReply } from 'fastify/types/reply'
+import { FastifyInstance, FastifyReply, RequestGenericInterface } from 'fastify'
 import { dbSuperUser, storage } from '../../plugins'
 import apiKey from '../../plugins/apikey'
 

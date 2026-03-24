@@ -6,7 +6,7 @@ build({
   bundle: false,
   outdir: 'dist',
   platform: 'node',
-  format: 'cjs',
+  format: 'esm',
   target: 'node20',
   sourcemap: true,
   tsconfig: 'tsconfig.json',

@@ -1,5 +1,4 @@
-import { ECSClient, ListTasksCommand } from '@aws-sdk/client-ecs'
-import { DesiredStatus } from '@aws-sdk/client-ecs/dist-types/models/enums'
+import { ECSClient, ListTasksCommand, DesiredStatus } from '@aws-sdk/client-ecs'
 import axios from 'axios'
 
 export class ClusterDiscoveryECS {

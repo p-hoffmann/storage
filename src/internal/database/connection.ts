@@ -1,5 +1,6 @@
 import retry from 'async-retry'
-import { Knex, knex } from 'knex'
+import knexDefault, { Knex } from 'knex'
+const knex = knexDefault.knex ?? knexDefault
 import pg, { DatabaseError } from 'pg'
 
 import KnexTimeoutError = knex.KnexTimeoutError

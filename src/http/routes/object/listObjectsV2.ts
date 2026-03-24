@@ -1,7 +1,6 @@
 import { getTenantConfig } from '@internal/database'
 import { DBMigration } from '@internal/database/migrations'
-import { FastifyInstance } from 'fastify'
-import { FastifyRequest } from 'fastify/types/request'
+import { FastifyInstance, FastifyRequest } from 'fastify'
 import { FromSchema } from 'json-schema-to-ts'
 import { getConfig } from '../../../config'
 import { AuthenticatedRequest } from '../../types'

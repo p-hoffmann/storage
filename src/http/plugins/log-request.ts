@@ -1,6 +1,5 @@
 import { logger, logSchema, redactQueryParamFromRequest } from '@internal/monitoring'
-import { FastifyReply } from 'fastify/types/reply'
-import { FastifyRequest } from 'fastify/types/request'
+import { FastifyReply, FastifyRequest } from 'fastify'
 import fastifyPlugin from 'fastify-plugin'
 
 interface RequestLoggerOptions {

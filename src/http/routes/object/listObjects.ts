@@ -1,6 +1,5 @@
 import { objectSchema } from '@storage/schemas'
-import { FastifyInstance } from 'fastify'
-import { FastifyRequest } from 'fastify/types/request'
+import { FastifyInstance, FastifyRequest } from 'fastify'
 import { FromSchema } from 'json-schema-to-ts'
 import { createDefaultSchema } from '../../routes-helper'
 import { AuthenticatedRequest } from '../../types'
