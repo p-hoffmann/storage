@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 import { createHash } from 'node:crypto'
 import { Writable } from 'node:stream'
 import { ERRORS } from '@internal/errors'

@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 import { ERRORS } from '@internal/errors'
 import { S3ProtocolHandler } from '@storage/protocols/s3/s3-handler'
 import { ROUTE_OPERATIONS } from '../../operations'

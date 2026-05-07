@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 type MergedYield<Gens extends Record<string, AsyncGenerator<any>>> = {
   [K in keyof Gens]: Gens[K] extends AsyncGenerator<infer V> ? { type: K; value: V } : never
 }[keyof Gens]

@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 /**
  * Iceberg REST Catalog API Error Types
  * Based on Apache Iceberg REST Catalog specification (iceberg.spec.yaml)

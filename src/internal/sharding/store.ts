@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 export type ResourceKind = 'vector' | 'iceberg-table'
 export type ShardStatus = 'active' | 'draining' | 'disabled'
 export type ReservationStatus = 'pending' | 'confirmed' | 'expired' | 'cancelled'

@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 import { createStorageBackend, StorageBackendAdapter } from '@storage/backend'
 import { CdnCacheManager } from '@storage/cdn/cdn-cache-manager'
 import { StorageKnexDB } from '@storage/database'

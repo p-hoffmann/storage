@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 /**
  * This special AbortController is used to wait for all the abort handlers to finish before resolving the promise.
  */

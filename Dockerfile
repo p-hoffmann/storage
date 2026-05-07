@@ -1,3 +1,5 @@
+# Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+# See LICENSE for the original Apache-2.0 license.
 # Base stage for shared environment setup
 FROM node:24-alpine3.23 AS base
 RUN apk add --no-cache g++ make python3

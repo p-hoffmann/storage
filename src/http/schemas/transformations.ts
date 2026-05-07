@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 export const transformationOptionsSchema = {
   height: { type: 'integer', examples: [100], minimum: 0 },
   width: { type: 'integer', examples: [100], minimum: 0 },

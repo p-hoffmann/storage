@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 import { MoveJobs, UpgradePgBossV10 } from '@storage/events'
 import { FastifyInstance, RequestGenericInterface } from 'fastify'
 import { FromSchema } from 'json-schema-to-ts'

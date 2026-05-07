@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 export { default as jwks } from './jwks'
 export { default as metricsConfig } from './metrics'
 export { default as migrations } from './migrations'

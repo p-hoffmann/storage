@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 import { eachParallel } from '@internal/testing/generators/array'
 import { randomUUID } from 'crypto'
 import { Readable } from 'stream'

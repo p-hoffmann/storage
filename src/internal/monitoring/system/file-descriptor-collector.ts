@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 import { Meter } from '@opentelemetry/api'
 import { exec } from 'child_process'
 import * as fs from 'fs/promises'

@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 import { HeadBucketCommand, S3Client } from '@aws-sdk/client-s3'
 import { isS3Error } from '@internal/errors'
 import { Queue } from '@internal/queue'

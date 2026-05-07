@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 import { MultipartFields } from '@fastify/multipart'
 import { ERRORS } from '@internal/errors'
 import { ByteLimitTransformStream } from '@storage/protocols/s3/byte-limit-stream'

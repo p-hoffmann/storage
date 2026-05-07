@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 import type { S3ServiceException } from '@aws-sdk/client-s3'
 import { ErrorCode } from './codes'
 import { RenderableError, StorageErrorOptions } from './renderable'

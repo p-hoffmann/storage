@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 import { Queue } from '@internal/queue'
 import { DeleteIcebergResources } from './iceberg/delete-iceberg-resources'
 import { ReconcileIcebergCatalog } from './iceberg/reconcile-catalog'

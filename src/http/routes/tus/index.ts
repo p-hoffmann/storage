@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 import * as https from 'node:https'
 import { S3Client } from '@aws-sdk/client-s3'
 import { PubSub, TenantConnection } from '@internal/database'

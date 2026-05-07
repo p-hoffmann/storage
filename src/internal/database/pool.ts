@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 import { wait } from '@internal/concurrency'
 import { getSslSettings } from '@internal/database/ssl'
 import { logger, logSchema } from '@internal/monitoring'

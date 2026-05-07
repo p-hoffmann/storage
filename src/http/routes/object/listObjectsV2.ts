@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 import { getTenantConfig } from '@internal/database'
 import { DBMigration } from '@internal/database/migrations'
 import { FastifyInstance, FastifyRequest } from 'fastify'

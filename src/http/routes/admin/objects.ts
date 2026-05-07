@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 import { ObjectScanner } from '@storage/scanner/scanner'
 import { FastifyInstance, FastifyReply, RequestGenericInterface } from 'fastify'
 import { dbSuperUser, storage } from '../../plugins'

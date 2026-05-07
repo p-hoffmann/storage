@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 import { decrypt, encrypt, generateHS512JWK } from '@internal/auth'
 import { createMutexByKey } from '@internal/concurrency'
 import { PubSubAdapter } from '@internal/pubsub'

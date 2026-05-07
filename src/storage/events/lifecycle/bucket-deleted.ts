@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 import { multitenantKnex } from '@internal/database'
 import { ErrorCode, StorageBackendError } from '@internal/errors'
 import { BasePayload } from '@internal/queue'

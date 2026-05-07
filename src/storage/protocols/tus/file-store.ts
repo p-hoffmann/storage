@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 import { Configstore, FileStore as TusFileStore } from '@tus/file-store'
 import { Upload } from '@tus/server'
 import fsExtra from 'fs-extra'

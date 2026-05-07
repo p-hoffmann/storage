@@ -1,3 +1,5 @@
+// Modified by Trex contributors. Original Copyright (c) 2026 Supabase, Inc.
+// See LICENSE for the original Apache-2.0 license.
 import { randomUUID } from 'node:crypto'
 import { SignedUploadToken, signJWT, verifyJWT } from '@internal/auth'
 import { getJwtSecret } from '@internal/database'
