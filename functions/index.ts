@@ -64,7 +64,17 @@ async function ensureApp() {
       });
       // Add error logging hook
       app.addHook('onError', (request, reply, error, done) => {
-        console.error("[storage] Fastify error:", error.message, error.stack?.split('\n').slice(0, 3).join('\n'));
+        console.error("[storage] Fastify error:", error.message, error.stack?.split('\n').slice(0, 6).join('\n'));
+        // Surface postgres error detail (table name, hint, etc.) which is otherwise hidden
+        const cause = (error as any).cause || (error as any).originalError;
+        if (cause) {
+          console.error("[storage] cause:", JSON.stringify({
+            code: cause.code, table: cause.table, schema: cause.schema,
+            constraint: cause.constraint, detail: cause.detail, hint: cause.hint,
+            position: cause.position, internalQuery: cause.internalQuery,
+            routine: cause.routine, message: cause.message,
+          }));
+        }
         done();
       });
       await app.ready();
