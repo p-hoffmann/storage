@@ -20,6 +20,9 @@ import {
 
 const pipeline = promisify(stream.pipeline)
 
+// Written by the fs-xattr stub in place of native extended attributes.
+const XATTR_SIDECAR_SUFFIX = '.xattr.json'
+
 interface FileMetadata {
   cacheControl: string
   contentType: string
@@ -219,6 +222,7 @@ export class FileBackend implements StorageBackendAdapter {
     try {
       const file = this.resolveSecurePath(withOptionalVersion(`${bucket}/${key}`, version))
       await fs.remove(file)
+      await fs.remove(file + XATTR_SIDECAR_SUFFIX)
 
       // Clean up empty parent directories
       await this.cleanupEmptyDirectories(path.dirname(file))
@@ -258,7 +262,10 @@ export class FileBackend implements StorageBackendAdapter {
     await fs.copyFile(srcFile, destFile)
 
     const originalMetadata = await this.getFileMetadata(srcFile)
-    await this.setFileMetadata(destFile, Object.assign({}, originalMetadata, metadata))
+    await this.setFileMetadata(destFile, {
+      cacheControl: metadata?.cacheControl ?? originalMetadata.cacheControl,
+      contentType: metadata?.contentType ?? originalMetadata.contentType,
+    })
 
     const fileStat = await fs.lstat(destFile)
     const eTag = await this.etag(destFile, fileStat)
@@ -276,8 +283,10 @@ export class FileBackend implements StorageBackendAdapter {
    * @param prefixes
    */
   async deleteObjects(bucket: string, prefixes: string[]): Promise<void> {
-    const promises = prefixes.map((prefix) => {
-      return fs.rm(this.resolveSecurePath(`${bucket}/${prefix}`))
+    const promises = prefixes.map(async (prefix) => {
+      const file = this.resolveSecurePath(`${bucket}/${prefix}`)
+      await fs.rm(file)
+      await fs.remove(file + XATTR_SIDECAR_SUFFIX)
     })
     const results = await Promise.allSettled(promises)
 
