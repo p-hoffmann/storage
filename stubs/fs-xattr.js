@@ -26,7 +26,11 @@ export async function get(file, attribute) {
 
 export async function set(file, attribute, value) {
   const meta = await readMeta(file);
-  meta[attribute] = typeof value === 'string' ? value : value.toString();
+  if (value === undefined || value === null) {
+    delete meta[attribute];
+  } else {
+    meta[attribute] = typeof value === 'string' ? value : value.toString();
+  }
   await writeMeta(file, meta);
 }
 
